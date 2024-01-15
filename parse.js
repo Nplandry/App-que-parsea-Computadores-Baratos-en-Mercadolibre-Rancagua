@@ -7,31 +7,31 @@ function parserApartamentData(){
         return cantidadBaños
     }
 
-
-    const getLocation = () => {
-        let localizacion = {
-            coordenadas : __PRELOADED_STATE__.initialState.components.location.map_info.location,
-            ubicacion : __PRELOADED_STATE__.initialState.components.location.map_info.item_address,
+/*
+    const getMoreInfo = () => {
+        let aditionalinfo = {
+            info1 : __PRELOADED_STATE__.initialState.components,
+            info2 : __PRELOADED_STATE__.initialState.components,
         };
-        const result = __PRELOADED_STATE__.initialState.components.location.map_info.item_location.split(", ");
+        const result = __PRELOADED_STATE__.initialState.components."".split(", ");
         if(result.length === 2){
-        localizacion.barrio = result[0];
-        localizacion.ciudad = result[1];
+        aditionalinfo.1 = result[0];
+        aditionalinfo.2 = result[1];
     } else {
-        localizacion.barrio = "pasan cosas, avisar a soporte";
-        localizacion.ciudad = "pasan cosas, avisar a soporte";
+        aditionalinfo.1 = "pasan cosas, avisar a soporte";
+        aditionalinfo.2 = "pasan cosas, avisar a soporte";
     }
-        return localizacion;
+        return aditionalinfo;
     };
-    
+    */
     let apartamentData = {
         id : __PRELOADED_STATE__.initialState.components.bookmark.item_id,
         costo : {
             precio : __PRELOADED_STATE__.initialState.components.price.price.value,
             PrecioMoneda : __PRELOADED_STATE__.initialState.components.price.price.currency_symbol,
-            Baños : 'getAtt()',
+            masinfo : 'getAtt()',
         },
-        localizacion : getLocation(),
+        masinfoo : "getMoreInfo()",
         };
 
     return apartamentData;

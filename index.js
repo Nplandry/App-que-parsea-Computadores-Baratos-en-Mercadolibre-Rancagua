@@ -52,14 +52,14 @@ async function getApartamentsLink(apartamentsLink){
 function getDesdeDeLaPagina(numeroDePagina){
     const encontrarDesde = (48 * (numeroDePagina - 1) + 1)
     const encontrarDesdeJSON = JSON.stringify(encontrarDesde)
-return `https://listado.mercadolibre.com.uy/inmuebles/montevideo/motevideo${'_Desde_'+ (encontrarDesdeJSON) + '_NoIndex_True'}`
+return `https://listado.mercadolibre.cl/computacion-en-libertador-b-ohiggins/computadores${'_Desde_'+ (encontrarDesdeJSON) + '_NoIndex_True'}`
 }
 
 //const appartamentToParse = 'https://apartamento.mercadolibre.com.uy/MLU-667897094-venta-en-pozo-apartamentos-monoambiente-1-y-2-dormitorios-en-el-centro-de-montevideo-_JM#position=16&search_layout=grid&type=item&tracking_id=8437de64-d8fc-4664-9dcd-2839b61d8c12'
 
 
 (async ()=> {
-    const urlToParse = "https://listado.mercadolibre.com.uy/inmuebles/apartamentos/alquiler/motevideo"
+    const urlToParse = "https://listado.mercadolibre.cl/computacion-en-libertador-b-ohiggins/computadores_NoIndex_True#applied_filter_id%3Dstate%26applied_filter_name%3DUbicaci%C3%B3n%26applied_filter_order%3D10%26applied_value_id%3DCL-LI%26applied_value_name%3DLibertador+B.+O%27Higgins%26applied_value_order%3D8%26applied_value_results%3D1116%26is_custom%3Dfalse"
 
     const apartamentsLink = await getApartamentsLink(urlToParse);
     for(let i = 0; i < apartamentsLink.length; i++){
