@@ -1,0 +1,15 @@
+{
+  "name": "parseando-computadores-baratos-en-mercadolibre-rancagua",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^21.7.0"
+  }
+}
