@@ -4,21 +4,24 @@ const { parserApartamentData } = require('./parse')
 
 async function ParseLinks(urlToParse){
 
+//Iniciar browser en puppeteer y desactiva el modo mostrar en consola
 const browser = await puppeteer.launch({headless : false})
 
+//Espera y abre una nueva pagina en el browser
 const page = await browser.newPage()
 
+//Setea el tamaño de la pagina que abrira
 await page.setViewport({
     width: 1600,
     height: 1080,
     deviceScaleFactor: 1
 });
-
+//Dirige la pagina que va a abrir a nuestro link para parsear
 await page.goto(urlToParse);
 
 //await page.waitForTimeout(4000);
 
-
+    //Evalua 
 const apartamentsLink = await page.evaluate(parserApartamentData)
 
 
